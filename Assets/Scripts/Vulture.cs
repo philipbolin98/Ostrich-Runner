@@ -53,7 +53,7 @@ public class Vulture : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.name != "PlatformSpawnTrigger") {
+        if (collision.name != "PlatformSpawnTrigger" && collision.name != "Player") {
             Destroy(gameObject);
         }
     }

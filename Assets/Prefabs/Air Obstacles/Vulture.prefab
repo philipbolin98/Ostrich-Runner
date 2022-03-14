@@ -13,11 +13,10 @@ GameObject:
   - component: {fileID: 2930542120459565361}
   - component: {fileID: 6402181094856719167}
   - component: {fileID: 2930542120459565373}
-  - component: {fileID: 2930542120459565375}
   - component: {fileID: 1318267607970041414}
   m_Layer: 0
   m_Name: Vulture
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,18 +142,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2930542120459565375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2930542120459565372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70305b04ce490c840aaeb4270134307e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1318267607970041414
 MonoBehaviour:
   m_ObjectHideFlags: 0

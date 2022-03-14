@@ -166,7 +166,7 @@ CompositeCollider2D:
   m_CompositePaths:
     m_Paths: []
   m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
+  m_OffsetDistance: 0
 --- !u!19719996 &1201982483099230955
 TilemapCollider2D:
   m_ObjectHideFlags: 0

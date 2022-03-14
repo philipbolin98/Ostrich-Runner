@@ -13,11 +13,10 @@ GameObject:
   - component: {fileID: 3040788073713111817}
   - component: {fileID: 3040788073713111816}
   - component: {fileID: 3040788073713111820}
-  - component: {fileID: 3040788073713111819}
   - component: {fileID: 3040788073713111823}
   m_Layer: 0
   m_Name: Snake
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,18 +156,6 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.6}
       - {x: -0.25, y: 0.6}
       - {x: -0.65, y: 1}
---- !u!114 &3040788073713111819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3040788073713111829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70305b04ce490c840aaeb4270134307e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3040788073713111823
 MonoBehaviour:
   m_ObjectHideFlags: 0

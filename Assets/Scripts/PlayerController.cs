@@ -77,4 +77,49 @@ public class PlayerController : MonoBehaviour {
         gameController.GetComponent<GameController>().enabled = true;
         gameStarted = true;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+         if (collision.gameObject.CompareTag("PowerUp")) {
+
+            ApplyPowerup(collision.gameObject.name);
+            Destroy(collision.gameObject);
+
+        } else if (collision.gameObject.CompareTag("Obstacle")) {
+
+            Destroy(gameObject);
+            GameObject.FindWithTag("GameController").GetComponent<GameController>().GameOver();
+        }
+    }
+
+    private void ApplyPowerup(string type) {
+        try {
+
+            switch (type) {
+
+                case "Jump":
+
+                    jumpForce += 3;
+                    break;
+
+                case "Shield":
+
+                    break;
+
+                case "Speed":
+
+                    GameObject.FindWithTag("GameController").GetComponent<GameController>().platformPrefab.GetComponent<PlatformScroller>().scrollSpeed++;
+                    break;
+
+                case "Star":
+
+                    break;
+
+                default:
+                    break;
+            }
+
+        } catch (System.Exception e) {
+            Debug.Log("Error in GameController.ApplyPowerup: " + e.Message);
+        }
+    }
 }

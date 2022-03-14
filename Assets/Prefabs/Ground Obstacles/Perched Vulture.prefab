@@ -13,11 +13,10 @@ GameObject:
   - component: {fileID: 3906238674337489431}
   - component: {fileID: 3906238674337489386}
   - component: {fileID: 6131375953249439153}
-  - component: {fileID: 3906238674337489387}
   - component: {fileID: 3906238674337489428}
   m_Layer: 0
   m_Name: Perched Vulture
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,18 +154,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.15, y: 1}
   m_Size: {x: 0.5, y: 0.7}
   m_Direction: 0
---- !u!114 &3906238674337489387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3906238674337489389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70305b04ce490c840aaeb4270134307e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3906238674337489428
 MonoBehaviour:
   m_ObjectHideFlags: 0

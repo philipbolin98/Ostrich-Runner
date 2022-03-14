@@ -96,12 +96,16 @@ public class GameController : MonoBehaviour {
     /// <returns></returns>
     IEnumerator SpawnPowerups() {
         while (true) {
+
+            float delay;
             if(Random.value < powerupChance / 100) {
                 spawnPowerup = true;
-                yield return new WaitForSeconds(powerupSpawnDelay);
+                delay = powerupSpawnDelay;
             } else {
-                yield return new WaitForSeconds(1);
+                delay = 1;
             }
+
+            yield return new WaitForSeconds(delay);
         }
     }
 
@@ -181,7 +185,6 @@ public class GameController : MonoBehaviour {
 
     //Places obstacles on newly generated platforms
     public void GenerateObstacles(GameObject newPlatform) {
-
         try {
 
             //i keeps track of x value of new obstacles
@@ -284,10 +287,11 @@ public class GameController : MonoBehaviour {
 
             Sprite powerupSprite = powerupSpriteList[Random.Range(0, powerupSpriteList.Length)];
 
-            GameObject powerupObject = powerupPrefab;
+            GameObject powerupObject = Instantiate(powerupPrefab, platform.transform); ;
             powerupObject.name = powerupSprite.name;
             powerupObject.GetComponent<SpriteRenderer>().sprite = powerupSprite;
-            powerupObject = Instantiate(powerupObject, platform.transform);
+            powerupObject.AddComponent<PolygonCollider2D>();
+            powerupObject.GetComponent<PolygonCollider2D>().isTrigger = true;
 
             float newX = platform.transform.position.x + platformWidth + .5f;
             float newY = platform.transform.position.y + platformHeight + .5f;
